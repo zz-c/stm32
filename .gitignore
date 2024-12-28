@@ -15,9 +15,9 @@
 *.lib
 
 # 忽略 IDE 生成的中间文件
+*.uvguix.*
 *.uvgui.*
 *.uvoptx
-*.uvprojx
 *.plg
 *.log
 *.dep
@@ -27,6 +27,7 @@ RTE/
 Listings/
 Objects/
 Output/
+DebugConfig/
 
 # 忽略用户生成的临时文件
 *.tmp
