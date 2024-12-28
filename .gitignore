@@ -27,7 +27,6 @@ RTE/
 Listings/
 Objects/
 Output/
-DebugConfig/
 
 # 忽略用户生成的临时文件
 *.tmp
