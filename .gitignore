@@ -1,0 +1,49 @@
+# 忽略编译生成的文件
+*.axf
+*.bin
+*.hex
+*.elf
+*.lnp
+*.map
+*.sct
+*.lst
+*.d
+*.bak
+*.o
+*.obj
+*.crf
+*.lib
+
+# 忽略 IDE 生成的中间文件
+*.uvgui.*
+*.uvoptx
+*.uvprojx
+*.plg
+*.log
+*.dep
+
+# 忽略编译器的输出目录
+RTE/
+Listings/
+Objects/
+Output/
+
+# 忽略用户生成的临时文件
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# STM32CubeMX 自动生成的 Backup 文件夹
+Backup/
+
+# 忽略系统相关的文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 忽略第三方库的生成文件（如使用 FreeRTOS、HAL 等）
+Middlewares/**/Debug/
+Middlewares/**/Release/
+Drivers/**/Debug/
+Drivers/**/Release/
