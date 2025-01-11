@@ -1,3 +1,4 @@
+#include "stm32f10x.h" 
 #include "MyI2c.h"
 
 #define AT24C02_ADDRESS		0xA0
@@ -8,14 +9,14 @@
   * @param  Data 要写入的数据
   * @retval 无
   */
-void AT24C02_WriteByte(unsigned char WordAddress,unsigned char Data)
+void AT24C02_WriteByte(uint8_t WordAddress,uint8_t data)
 {
 	MyI2C_Start();
 	MyI2C_SendByte(AT24C02_ADDRESS);
 	MyI2C_ReceiveAck();
 	MyI2C_SendByte(WordAddress);
 	MyI2C_ReceiveAck();
-	MyI2C_SendByte(Data);
+	MyI2C_SendByte(data);
 	MyI2C_ReceiveAck();
 	MyI2C_Stop();
 }
@@ -25,7 +26,7 @@ void AT24C02_WriteByte(unsigned char WordAddress,unsigned char Data)
   * @param  WordAddress 要读出字节的地址
   * @retval 读出的数据
   */
-unsigned char AT24C02_ReadByte(unsigned char WordAddress)
+uint8_t AT24C02_ReadByte(uint8_t WordAddress)
 {
 	unsigned char Data;
 	MyI2C_Start();
